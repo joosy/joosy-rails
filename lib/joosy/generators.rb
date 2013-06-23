@@ -14,8 +14,7 @@ module Joosy
         Generator.prototype.version = function(){return '#{Joosy::VERSION}'};
       JS
 
-      arguments = arguments.join("','")
-      ExecJS.compile(source).eval("new Generator('#{arguments}').generate()")
+      ExecJS.compile(source).eval("new Generator(#{arguments.to_json}).generate()")
     end
   end
 end
