@@ -10,6 +10,7 @@ module Joosy
 #= require jquery
 #= require jquery.form
 #= require sugar
+#= require hamlcoffee
         COFFEE
 
         self.destination_root = ::Rails.root.join('app/assets/javascripts/').join(name || '')
