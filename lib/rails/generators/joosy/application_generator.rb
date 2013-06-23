@@ -1,4 +1,3 @@
-require 'ejs'
 require 'joosy/generators'
 
 module Joosy

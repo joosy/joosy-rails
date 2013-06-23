@@ -1,6 +1,5 @@
 require 'joosy'
 
-require 'joosy/generators'
 require 'joosy/rails/version'
 require 'joosy/rails/sprockets'
 require 'joosy/rails/engine'
