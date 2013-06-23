@@ -19,7 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'joosy', '>= 1.2.0.alpha'
-  spec.add_dependency 'joosy-generators'
+  spec.add_dependency 'sprockets'
+  spec.add_dependency 'execjs'
   spec.add_dependency 'ejs'
 
   spec.add_development_dependency 'rake'
