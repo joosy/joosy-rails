@@ -10,3 +10,17 @@ module Joosy
   end
 end
 
+module ActionDispatch::Routing
+  class Mapper
+    def joosy(route, options={})
+      extender = route.last == '/' ? '(*x)' : '(/*x)'
+
+      match route => 'joosy/rails/serve#index', 
+        via:      :get, 
+        as:       (options[:application] ? "joosy_#{options[:application]}" : "joosy"),
+        defaults: {route: route, application: options[:application]},
+        anchor:   false,
+        format:   false
+    end
+  end
+end

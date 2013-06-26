@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript">
+    window.JoosyEnvironment = {
+      router: {
+        base: <%= '<%= raw @base.to_json %'+'>' %>
+      }
+    }
+  </script>
+
+  <%= "<%= stylesheet_link_tag    'application', :media => 'all' %"+'>' %>
+  <%= "<%= javascript_include_tag '#{name}#{'/' if name}application' %"+'>' %>
+  <%= '<%= csrf_meta_tags %'+'>' %>
+</head>
+<body>
+</body>
+</html>
