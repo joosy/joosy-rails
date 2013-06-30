@@ -15,12 +15,14 @@ module ActionDispatch::Routing
     def joosy(route, options={})
       extender = route.last == '/' ? '(*x)' : '(/*x)'
 
-      match route => 'joosy/rails/serve#index', 
-        via:      :get, 
-        as:       (options[:application] ? "joosy_#{options[:application]}" : "joosy"),
-        defaults: {route: route, application: options[:application]},
-        anchor:   false,
-        format:   false
+      match route,
+        controller:   options[:controller] || 'joosy/rails/serve',
+        action:       options[:action] || 'index',
+        via:          :get, 
+        as:           (options[:application] ? "joosy_#{options[:application]}" : "joosy"),
+        defaults:     {route: route, application: options[:application]},
+        anchor:       false,
+        format:       false
     end
   end
 end

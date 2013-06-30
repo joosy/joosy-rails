@@ -34,7 +34,7 @@ module Joosy
         template File.expand_path('../templates/layout.html.erb', __FILE__), "app/views/layouts/#{layout}.html.erb"
 
         application = name ? ", application: '#{name}'" : ''
-        route "joosy '/'#{application}"
+        route "joosy '/#{name}'#{application}"
       end
     end
   end
