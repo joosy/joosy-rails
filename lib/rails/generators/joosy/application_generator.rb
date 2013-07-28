@@ -14,7 +14,7 @@ module Joosy
         COFFEE
 
         self.destination_root = ::Rails.root.join('app/assets/javascripts/').join(name || '')
-        run Joosy::Generators.pregenerate('project/base', {name: name, dependencies: dependencies})
+        run Joosy::Generators.pregenerate('project/base', {enableHTML5: true, templaterPrefix: name, dependencies: dependencies})
       end
 
       def create_bindings
