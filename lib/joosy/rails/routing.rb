@@ -13,11 +13,9 @@ module ActionDispatch::Routing
         end
 
         def resources(*args, &block)
-          puts args.inspect
           @context.resources(*args) do
-            scope = @context.instance_eval{ @scope }
-            namespace = Joosy::Rails::Engine.resources[scope[:module].to_s] ||= {}
-            namespace[args[0].to_s.singularize] ||= "#{scope[:path]}/#{args[0]}"
+            scope = @context.instance_eval { @scope }
+            Joosy::Rails::Engine.resources << "#{scope[:path]}/#{scope[:scope_level_resource].path}"
             @context.joosy_resources(&block)
           end
         end

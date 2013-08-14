@@ -1,0 +1,7 @@
+#= require ./resource_loader
+
+routes = <%= Joosy::Rails::Engine.resources.to_json %>
+
+Joosy.ResourceLoader.loadResources routes
+
+
