@@ -18,10 +18,11 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'joosy', '>= 1.2.0.alpha.48'
+  spec.add_dependency 'joosy', '>= 1.2.0.alpha.63'
   spec.add_dependency 'sprockets'
   spec.add_dependency 'execjs'
-  spec.add_dependency 'ejs'
+  spec.add_dependency 'activesupport'
+  spec.add_dependency 'thor'
 
   spec.add_dependency 'sugar-rails'
   spec.add_dependency 'jquery-form-rails'

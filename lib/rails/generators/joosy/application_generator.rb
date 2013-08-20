@@ -13,8 +13,13 @@ module Joosy
 #= require hamlcoffee
         COFFEE
 
-        self.destination_root = ::Rails.root.join('app/assets/javascripts/').join(name || '')
-        run Joosy::Generators.pregenerate('project/base', {enableHTML5: true, templaterPrefix: name, dependencies: dependencies})
+        @options = {
+          'dependencies' => dependencies,
+          'html5'        => true,
+          'prefix'       => name || ''
+        }
+
+        directory 'application', Pathname.new('app/assets/javascripts/').join(name || '')
       end
 
       def create_bindings
@@ -24,14 +29,14 @@ module Joosy
           index = ::Rails.root.join('app/assets/javascripts/application.js')
 
           if File.exists?(index)
-            copy_file index, 'app/assets/javascripts/application.bak'
+            copy_file index, 'app/assets/javascripts/application.old.js'
             remove_file index
           end
         end
 
         layout = 'joosy'
         layout << "/#{name}" if name
-        template File.expand_path('../templates/layout.html.erb', __FILE__), "app/views/layouts/#{layout}.html.erb"
+        erb_template File.expand_path('../templates/layout.html.erb', __FILE__), "app/views/layouts/#{layout}.html.erb"
 
         application = name ? ", application: '#{name}'" : ''
         route "joosy '/#{name}'#{application}"

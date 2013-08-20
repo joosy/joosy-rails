@@ -1,5 +1,5 @@
 module Joosy
   module Rails
-    VERSION = "1.0.0.beta.3"
+    VERSION = "1.0.0.RC1"
   end
 end

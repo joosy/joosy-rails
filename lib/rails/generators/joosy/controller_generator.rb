@@ -1,10 +1,10 @@
-require_relative './base'
-
 module Joosy
   module Generators
-    class ControllerGenerator < Base
+    class ControllerGenerator < ::Rails::Generators::Base
       argument :name, type: :string
       class_option :copy, :default => false, :type => :boolean, :desc => 'Indicates whether internal controller should be copied'
+
+      source_root ::Rails.root
 
       def create_files
         if options["copy"]
