@@ -5,7 +5,7 @@
 Rails ties for the [Joosy](http://joosy.ws) Framework
 
 [![Gem Version](https://badge.fury.io/rb/joosy-rails.png)](http://badge.fury.io/rb/joosy-rails)
-[![Dependency Status](https://gemnasium.com/joosy/rails.png)](https://gemnasium.com/joosy/rails)
+[![Dependency Status](https://gemnasium.com/joosy/joosy-rails.png)](https://gemnasium.com/joosy/joosy-rails)
 
 On the menu:
 
