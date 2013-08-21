@@ -1,18 +1,21 @@
 # Joosy::Rails 
 
-![Joosy](http://f.cl.ly/items/2N2J453J2B353F1A0t0I/joocy1.1.png)
-
-Rails bindings for the [Joosy](http://joosy.ws) Framework.
+<a href="http://joosy.ws"><img src="http://f.cl.ly/items/3X0f2K1z3r1X3K162W2c/logo.png" align="right" /></a>
 
 [![Gem Version](https://badge.fury.io/rb/joosy-rails.png)](http://badge.fury.io/rb/joosy-rails)
 [![Dependency Status](https://gemnasium.com/joosy/joosy-rails.png)](https://gemnasium.com/joosy/joosy-rails)
 
-On the menu:
+The bindings between **[Joosy](http://joosy.ws) framework** and [Rails](http://rubyonrails.org).
+
+If you are seeking for information about Joosy, start with [official site](http://joosy.ws), [guides](http://guides.joosy.ws) or [central repository](https://github.com/joosy/joosy/).
+
+## Capabilities
 
   * Full assets integration
   * Generators
   * Built-in serving controller
   * Routes helpers
+  * Automatic Joosy Resources generation
 
 ## Installation
 
