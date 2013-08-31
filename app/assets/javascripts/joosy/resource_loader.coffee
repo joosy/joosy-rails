@@ -1,3 +1,5 @@
+#= require joosy/extensions/resources
+
 Joosy.ResourceLoader =
   defineResource: (name, path, parent) ->
     class @[name] extends parent
