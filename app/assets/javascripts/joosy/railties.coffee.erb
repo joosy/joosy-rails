@@ -1,5 +1,11 @@
 #= require ./resource_loader
 
+<%
+  Joosy::Rails::Engine.route_dependencies.each do |path|
+    depend_on path
+  end
+%>
+
 routes = <%= Joosy::Rails::Engine.resources.to_json %>
 
 Joosy.ResourceLoader.loadResources routes
