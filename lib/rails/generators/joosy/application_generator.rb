@@ -9,7 +9,7 @@ module Joosy
         dependencies = <<-COFFEE
 #= require jquery
 #= require jquery.form
-#= require sugar
+#= require sugar-full
 #= require hamlcoffee
         COFFEE
 
