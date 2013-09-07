@@ -7,10 +7,12 @@ module Joosy
 
       def create_application
         dependencies = <<-COFFEE
-#= require jquery
-#= require jquery.form
-#= require sugar-full
 #= require hamlcoffee
+#= require jquery
+#= require joosy
+#= require joosy/resources
+#= require joosy/railties
+#= require sugar
         COFFEE
 
         @options = {
@@ -29,7 +31,7 @@ module Joosy
           index = ::Rails.root.join('app/assets/javascripts/application.js')
 
           if File.exists?(index)
-            copy_file index, 'app/assets/javascripts/application.old.js'
+            copy_file index, 'app/assets/javascripts/application.js-old'
             remove_file index
           end
         end

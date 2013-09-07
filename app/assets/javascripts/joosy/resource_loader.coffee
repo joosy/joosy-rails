@@ -1,4 +1,4 @@
-#= require joosy/extensions/resources
+#= require joosy/resources
 
 Joosy.ResourceLoader =
   defineResource: (name, path, parent) ->
