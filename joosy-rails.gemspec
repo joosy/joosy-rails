@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'joosy', '>= 1.2.0.beta.1'
+  spec.add_dependency 'joosy', '>= 1.2.0.beta.4'
   spec.add_dependency 'sprockets'
   spec.add_dependency 'execjs'
   spec.add_dependency 'activesupport'

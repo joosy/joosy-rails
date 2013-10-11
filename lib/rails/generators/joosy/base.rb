@@ -50,7 +50,7 @@ module Joosy
         @options = {
           'name'      => name,
           'namespace' => name.split('/')[0..-2].map(&:camelize).join('/'),
-          'view'      => name.split('/').last,
+          'view'      => name.split('/').last.underscore,
           'klass'     => name.split('/').last.camelize
         }
 
