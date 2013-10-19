@@ -80,3 +80,7 @@ This will map your `dummy` Joosy application to the root url. The `application` 
 Copyright 2013 [Boris Staal](http://staal.io)
 
 It is free software, and may be redistributed under the terms of MIT license.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joosy/joosy-rails/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
