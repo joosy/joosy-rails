@@ -3,7 +3,7 @@
 Joosy.ResourceLoader =
   defineResource: (name, path, parent) ->
     class @[name] extends parent
-      @entity name.underscore()
+      @entity inflection.underscore(name)
       @source path
 
   namespaceFromLevels: (levels) ->
@@ -11,19 +11,19 @@ Joosy.ResourceLoader =
       res = x.replace(/^\//, '').split('/')
       if res.length > 1
         # resource, has second (mask) part
-        res = res[0].singularize()
+        res = inflection.singularize(res[0])
       else
         # scope
         res = res[0]
-      res.camelize()
+      inflection.camelize res
     ).join('.')
 
   loadResources: (routes) ->
     for route in routes
       levels   = route.match /\/[^\/]+(\/:[^\/]+)?/g
-      continue unless Object.isArray(levels)
+      continue unless levels instanceof Array
       rootPath = levels.pop()
-      name     = rootPath.replace(/^\//, '').singularize().camelize()
+      name     = inflection.camelize inflection.singularize(rootPath.replace(/^\//, ''))
 
       parent = if window[name] && Joosy.Module.hasAncestor(window[name], Joosy.Resources.REST)
         window[name]
